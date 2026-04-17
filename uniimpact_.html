@@ -1,0 +1,268 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,Arial,sans-serif}
+.site{background:#fff;border-radius:16px;overflow:hidden;border:0.5px solid #dde8e2}
+
+/* NAV */
+.nav{background:#fff;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #eaf2ec}
+.nav-logo{display:flex;align-items:center;gap:10px}
+.nav-logo img{width:38px;height:38px;border-radius:50%;object-fit:cover}
+.nav-logo span{font-size:16px;font-weight:800;color:#145c34;letter-spacing:0.5px}
+.nav-links{display:flex;gap:6px}
+.nav-links a{color:#444;font-size:13px;text-decoration:none;padding:6px 14px;border-radius:20px;font-weight:500;transition:background 0.15s,color 0.15s}
+.nav-links a:hover{background:#E1F5EE;color:#145c34}
+.nav-cta{background:#145c34;color:white;font-size:12px;font-weight:700;padding:8px 18px;border-radius:20px;text-decoration:none;letter-spacing:0.3px}
+
+/* HERO */
+.hero{background:#145c34;padding:56px 32px 0;display:flex;align-items:flex-end;gap:32px;overflow:hidden}
+.hero-left{flex:1;padding-bottom:52px}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(111,207,151,0.18);border:1px solid rgba(111,207,151,0.35);color:#9FE1CB;font-size:11px;font-weight:600;letter-spacing:1.3px;padding:5px 14px;border-radius:20px;margin-bottom:20px;text-transform:uppercase}
+.hero-dot{width:6px;height:6px;border-radius:50%;background:#6FCF97;display:inline-block}
+.hero-left h1{color:#fff;font-size:32px;font-weight:800;line-height:1.2;margin-bottom:16px}
+.hero-left h1 span{color:#6FCF97}
+.hero-left p{color:rgba(255,255,255,0.65);font-size:14px;line-height:1.75;max-width:340px;margin-bottom:28px}
+.hero-btns{display:flex;gap:12px;align-items:center}
+.btn-primary{background:#6FCF97;color:#0a3d1f;font-size:13px;font-weight:700;padding:12px 24px;border-radius:25px;text-decoration:none;letter-spacing:0.2px}
+.btn-secondary{color:rgba(255,255,255,0.75);font-size:13px;font-weight:500;text-decoration:none;display:flex;align-items:center;gap:6px}
+.play-icon{width:28px;height:28px;border-radius:50%;border:1.5px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center}
+.hero-right{flex:0 0 220px;display:flex;align-items:flex-end;justify-content:center}
+.hero-logo-wrap{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:20px 20px 0 0;padding:28px 28px 0;display:flex;align-items:flex-end;justify-content:center}
+.hero-right img{width:170px;height:170px;object-fit:contain;filter:drop-shadow(0 8px 24px rgba(0,0,0,0.3))}
+
+/* STATS */
+.stats{background:#f0f9f4;padding:28px 32px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border-bottom:1px solid #dde8e2}
+.stat-item{padding:20px 24px;text-align:center;background:#f0f9f4}
+.stat-num{font-size:26px;font-weight:800;color:#145c34;line-height:1}
+.stat-label{font-size:12px;color:#5a7a68;margin-top:4px;font-weight:500}
+
+/* SOBRE */
+.sobre{padding:52px 32px;display:flex;gap:40px;align-items:center;background:#fff}
+.sobre-text{flex:1}
+.section-pill{display:inline-block;background:#E1F5EE;color:#0F6E56;font-size:11px;font-weight:700;letter-spacing:1.2px;padding:4px 12px;border-radius:20px;margin-bottom:14px;text-transform:uppercase}
+.sobre-text h2{font-size:22px;font-weight:800;color:#0e3d22;margin-bottom:12px;line-height:1.3}
+.sobre-text p{font-size:14px;color:#4a6357;line-height:1.75;margin-bottom:20px}
+.sobre-link{display:inline-flex;align-items:center;gap:8px;color:#145c34;font-size:13px;font-weight:700;text-decoration:none}
+.sobre-visual{flex:0 0 200px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mini-card{border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.mc1{background:#E1F5EE}
+.mc2{background:#E6F1FB}
+.mc3{background:#FAEEDA}
+.mc4{background:#EEEDFE}
+.mini-card .mc-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center}
+.mini-card .mc-title{font-size:11px;font-weight:700;color:#0e3d22}
+.mini-card .mc-sub{font-size:10px;color:#5a7a68}
+
+/* SERVICIOS */
+.servicios{padding:16px 32px 52px;background:#fff}
+.servicios-header{text-align:center;margin-bottom:28px}
+.servicios-header h2{font-size:21px;font-weight:800;color:#0e3d22;margin-top:10px}
+.cards-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.scard{border-radius:14px;padding:24px 20px;border:1px solid #eaf2ec;background:#fff;transition:transform 0.2s,border-color 0.2s}
+.scard:hover{transform:translateY(-4px);border-color:#6FCF97}
+.scard-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+.scard-num{font-size:11px;font-weight:700;color:#b0c9bc}
+.scard-icon-wrap{width:42px;height:42px;border-radius:12px;display:flex;align-items:center;justify-content:center}
+.ic1{background:#E1F5EE}.ic2{background:#E6F1FB}.ic3{background:#FAEEDA}
+.scard h4{font-size:15px;font-weight:700;color:#0e3d22;margin-bottom:8px}
+.scard p{font-size:12px;color:#5a7a68;line-height:1.65}
+.scard-footer{margin-top:16px;padding-top:14px;border-top:1px solid #f0f4f2}
+.scard-tag{display:inline-block;font-size:11px;font-weight:600;padding:3px 10px;border-radius:10px}
+.t1{background:#E1F5EE;color:#0F6E56}.t2{background:#E6F1FB;color:#185FA5}.t3{background:#FAEEDA;color:#854F0B}
+
+/* IMPACTO */
+.impacto{background:#0e3d22;padding:52px 32px;text-align:center}
+.impacto h2{color:#fff;font-size:21px;font-weight:800;margin-top:10px;margin-bottom:10px}
+.impacto p{color:rgba(255,255,255,0.6);font-size:14px;max-width:440px;margin:0 auto 32px}
+.impacto-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-bottom:36px}
+.icard{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:22px 16px;text-align:left}
+.icard-step{font-size:11px;font-weight:700;color:#6FCF97;letter-spacing:1px;margin-bottom:8px}
+.icard h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:6px}
+.icard p{font-size:12px;color:rgba(255,255,255,0.5);line-height:1.6}
+.btn-impacto{display:inline-block;background:#6FCF97;color:#0a3d1f;font-size:13px;font-weight:700;padding:13px 30px;border-radius:25px;text-decoration:none}
+
+/* FOOTER */
+.footer{background:#0a3d1f;padding:28px 32px;display:flex;align-items:center;justify-content:space-between}
+.footer-left{display:flex;align-items:center;gap:10px}
+.footer-left img{width:32px;height:32px;border-radius:50%;object-fit:cover;opacity:0.9}
+.footer-brand{color:rgba(255,255,255,0.9);font-weight:800;font-size:14px;letter-spacing:0.5px}
+.footer-center{color:rgba(255,255,255,0.4);font-size:12px}
+.footer-links{display:flex;gap:16px}
+.footer-links a{color:rgba(255,255,255,0.45);font-size:12px;text-decoration:none}
+</style>
+
+<div class="site">
+
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="/mnt/user-data/uploads/IMG-20260415-WA0007.jpg" alt="logo">
+      <span>UNIIMPACT</span>
+    </div>
+    <div class="nav-links">
+      <a href="#">Inicio</a>
+      <a href="#">Proyecto</a>
+      <a href="#">Comunidad</a>
+      <a href="#">Blog</a>
+    </div>
+    <a href="#" class="nav-cta">Únete ahora</a>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-left">
+      <div class="hero-badge"><span class="hero-dot"></span> Comunidad activa</div>
+      <h1>Tecnología al servicio<br>del <span>cambio social</span></h1>
+      <p>Conectamos personas, ideas y herramientas digitales para construir un mundo más justo e innovador.</p>
+      <div class="hero-btns">
+        <a href="#" class="btn-primary">Únete ahora</a>
+        <a href="#" class="btn-secondary">
+          <div class="play-icon">
+            <svg width="10" height="12" viewBox="0 0 10 12" fill="white"><polygon points="0,0 10,6 0,12"/></svg>
+          </div>
+          Ver video
+        </a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="hero-logo-wrap">
+        <img src="/mnt/user-data/uploads/IMG-20260415-WA0007.jpg" alt="UNIIMPACT logo">
+      </div>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-item">
+      <div class="stat-num">+500</div>
+      <div class="stat-label">Miembros activos</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">30+</div>
+      <div class="stat-label">Proyectos lanzados</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">12</div>
+      <div class="stat-label">Comunidades impactadas</div>
+    </div>
+  </div>
+
+  <div class="sobre">
+    <div class="sobre-text">
+      <div class="section-pill">Nuestra misión</div>
+      <h2>¿Qué es UNIIMPACT?</h2>
+      <p>Somos una comunidad que une tecnología, personas y causas sociales para generar un impacto positivo real. Creemos que la innovación digital puede transformar la sociedad cuando está en las manos correctas.</p>
+      <a href="#" class="sobre-link">
+        Conoce más
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#145c34" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="sobre-visual">
+      <div class="mini-card mc1">
+        <div class="mc-icon" style="background:#9FE1CB">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#085041" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div class="mc-title">Impacto real</div>
+        <div class="mc-sub">Desde 2022</div>
+      </div>
+      <div class="mini-card mc2">
+        <div class="mc-icon" style="background:#85B7EB">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0C447C" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+        </div>
+        <div class="mc-title">Global</div>
+        <div class="mc-sub">Red internacional</div>
+      </div>
+      <div class="mini-card mc3">
+        <div class="mc-icon" style="background:#FAC775">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#633806" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="mc-title">Innovación</div>
+        <div class="mc-sub">Top proyectos</div>
+      </div>
+      <div class="mini-card mc4">
+        <div class="mc-icon" style="background:#AFA9EC">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#26215C" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="mc-title">Comunidad</div>
+        <div class="mc-sub">Colaborativa</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="servicios">
+    <div class="servicios-header">
+      <div class="section-pill">Qué ofrecemos</div>
+      <h2>Nuestros pilares de impacto</h2>
+    </div>
+    <div class="cards-grid">
+      <div class="scard">
+        <div class="scard-top">
+          <span class="scard-num">01</span>
+          <div class="scard-icon-wrap ic1">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0F6E56" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+        </div>
+        <h4>Tecnología Social</h4>
+        <p>Desarrollamos herramientas digitales accesibles para resolver problemas sociales reales en comunidades vulnerables.</p>
+        <div class="scard-footer"><span class="scard-tag t1">Herramientas digitales</span></div>
+      </div>
+      <div class="scard">
+        <div class="scard-top">
+          <span class="scard-num">02</span>
+          <div class="scard-icon-wrap ic2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#185FA5" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+        </div>
+        <h4>Comunidad</h4>
+        <p>Espacios colaborativos donde personas de diferentes disciplinas se unen para generar cambios positivos y duraderos.</p>
+        <div class="scard-footer"><span class="scard-tag t2">Red de colaboración</span></div>
+      </div>
+      <div class="scard">
+        <div class="scard-top">
+          <span class="scard-num">03</span>
+          <div class="scard-icon-wrap ic3">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#854F0B" stroke-width="1.8"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+        </div>
+        <h4>Innovación</h4>
+        <p>Proyectos que combinan creatividad y tecnología para transformar la sociedad con soluciones de alto impacto.</p>
+        <div class="scard-footer"><span class="scard-tag t3">Proyectos sociales</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="impacto">
+    <div class="section-pill" style="background:rgba(111,207,151,0.18);color:#9FE1CB;border:1px solid rgba(111,207,151,0.3)">Cómo funciona</div>
+    <h2>Genera impacto en 3 pasos</h2>
+    <p>Desde que te unes hasta que lanzas tu primer proyecto, te acompañamos en cada etapa.</p>
+    <div class="impacto-grid">
+      <div class="icard">
+        <div class="icard-step">PASO 01</div>
+        <h4>Únete a la comunidad</h4>
+        <p>Regístrate y accede a nuestra red de innovadores sociales comprometidos con el cambio.</p>
+      </div>
+      <div class="icard">
+        <div class="icard-step">PASO 02</div>
+        <h4>Encuentra tu proyecto</h4>
+        <p>Explora los proyectos activos o propón una nueva idea que quieras llevar a la realidad.</p>
+      </div>
+      <div class="icard">
+        <div class="icard-step">PASO 03</div>
+        <h4>Genera impacto real</h4>
+        <p>Colabora con el equipo, usa nuestras herramientas y transforma tu idea en acción.</p>
+      </div>
+    </div>
+    <a href="#" class="btn-impacto">Comienza ahora</a>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">
+      <img src="/mnt/user-data/uploads/IMG-20260415-WA0007.jpg" alt="logo">
+      <span class="footer-brand">UNIIMPACT</span>
+    </div>
+    <div class="footer-center">Tecnología · Comunidad · Cambio Social</div>
+    <div class="footer-links">
+      <a href="#">Privacidad</a>
+      <a href="#">Contacto</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+
+</div>
