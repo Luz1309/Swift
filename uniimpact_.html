@@ -1,4 +1,8 @@
-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>UNIIMPACT</title>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Segoe UI',system-ui,Arial,sans-serif}
@@ -90,22 +94,34 @@ body{font-family:'Segoe UI',system-ui,Arial,sans-serif}
 .footer-links{display:flex;gap:16px}
 .footer-links a{color:rgba(255,255,255,0.45);font-size:12px;text-decoration:none}
 </style>
-
+</head>
+<body>
 <div class="site">
 
   <nav class="nav">
     <div class="nav-logo">
-      <img src="/mnt/user-data/uploads/IMG-20260415-WA0007.jpg" alt="logo">
+      <img src="LOGO UNIIMPACT.png" alt="logo">
       <span>UNIIMPACT</span>
     </div>
     <div class="nav-links">
-      <a href="#">Inicio</a>
-      <a href="#">Proyecto</a>
-      <a href="#">Comunidad</a>
-      <a href="#">Blog</a>
+
+      <a href="proyecto.html">Proyectos</a>
+      <a href="comunidad.html">Comunidad</a>
+      <a href="donaciones.html">Donaciones</a>
     </div>
-    <a href="#" class="nav-cta">Unete ahora</a>
+
+    <div id="user-area">
+      <button id="loginBtn" class="nav-cta" onclick="mostrarLogin()">Iniciar sesión</button>
+
+      <div id="userInfo" style="display:none; align-items:center; gap:10px;">
+        <a href="perfil.html" id="userName" style="color:#145c34; font-weight:700;"></a>
+        <button onclick="logout()" style="background:none; border:none; cursor:pointer;">Cerrar</button>
+      </div>
+
+    </div>
+
   </nav>
+
 
   <div class="hero">
     <div class="hero-left">
@@ -113,82 +129,29 @@ body{font-family:'Segoe UI',system-ui,Arial,sans-serif}
       <h1>Tecnología al servicio<br>del <span>cambio social</span></h1>
       <p>Conectamos personas, ideas y herramientas digitales para construir un mundo más justo e innovador.</p>
       <div class="hero-btns">
-        <a href="#" class="btn-primary">Unete ahora</a>
-        <a href="#" class="btn-secondary">
-          <div class="play-icon">
-            <svg width="10" height="12" viewBox="0 0 10 12" fill="white"><polygon points="0,0 10,6 0,12"/></svg>
-          </div>
-          Ver video
-        </a>
-      </div>
-    </div>
-    <div class="hero-right">
-      <div class="hero-logo-wrap">
-        <img src="/mnt/user-data/uploads/IMG-20260415-WA0007.jpg" alt="UNIIMPACT logo">
+        <a href="https://form.typeform.com/to/eacgxx9L" class="btn-primary">Únete ahora</a>
+
+
       </div>
     </div>
   </div>
 
-  <div class="stats">
-    <div class="stat-item">
-      <div class="stat-num"> </div>
-      <div class="stat-label">Miembros activos</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num"></div>
-      <div class="stat-label">Proyectos lanzados</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num">12</div>
-      <div class="stat-label">Comunidades </div>
-    </div>
-  </div>
+
 
   <div class="sobre">
     <div class="sobre-text">
       <div class="section-pill">Nuestra misión</div>
       <h2>¿Qué es UNIIMPACT?</h2>
-      <p>Somos una comunidad que une tecnologia, personas y causas sociales para generar un impacto positivo real. Creemos que la innovacion digital puede transformar la sociedad cuando está en las manos correctas.</p>
+      <p>Somos una comunidad que une tecnología, personas y causas sociales para generar un impacto positivo real. Creemos que la innovación digital puede transformar la sociedad cuando está en las manos correctas.</p>
       <a href="#" class="sobre-link">
         Conoce más
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#145c34" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
     </div>
-    <div class="sobre-visual">
-      <div class="mini-card mc1">
-        <div class="mc-icon" style="background:#9FE1CB">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#085041" stroke-width="2"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 8v4l3 3"/></svg>
-        </div>
-        <div class="mc-title">Impacto real</div>
-        <div class="mc-sub">2026</div>
-      </div>
-      <div class="mini-card mc2">
-        <div class="mc-icon" style="background:#85B7EB">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0C447C" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
-        </div>
-        <div class="mc-title">Global</div>
-        <div class="mc-sub">Red internacional</div>
-      </div>
-      <div class="mini-card mc3">
-        <div class="mc-icon" style="background:#FAC775">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#633806" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-        </div>
-        <div class="mc-title">Innovación</div>
-        <div class="mc-sub">Top proyectos</div>
-      </div>
-      <div class="mini-card mc4">
-        <div class="mc-icon" style="background:#AFA9EC">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#26215C" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="mc-title">Comunidad</div>
-        <div class="mc-sub">Colaborativa</div>
-      </div>
-    </div>
   </div>
 
   <div class="servicios">
     <div class="servicios-header">
-      <div class="section-pill">Qué ofrecemos</div>
       <h2>Nuestros pilares de impacto</h2>
     </div>
     <div class="cards-grid">
@@ -229,19 +192,19 @@ body{font-family:'Segoe UI',system-ui,Arial,sans-serif}
   </div>
 
   <div class="impacto">
-    <div class="section-pill" style="background:rgba(111,207,151,0.18);color:#9FE1CB;border:1px solid rgba(111,207,151,0.3)">Cómo funciUona</div>
+    <div class="section-pill" style="background:rgba(111,207,151,0.18);color:#9FE1CB;border:1px solid rgba(111,207,151,0.3)">Cómo funciona</div>
     <h2>Genera impacto en 3 pasos</h2>
-    <p>Desde que te unes hasta que lanzas tu primer proyecto, te acompañamos en cada etapa.</p>
+    <p>Desde que te unes al proyecto, te acompañamos en cada etapa.</p>
     <div class="impacto-grid">
       <div class="icard">
         <div class="icard-step">PASO 01</div>
-        <h4>nete a la comunidad</h4>
+        <h4>Únete a la comunidad</h4>
         <p>Regístrate y accede a nuestra red de innovadores sociales comprometidos con el cambio.</p>
       </div>
       <div class="icard">
         <div class="icard-step">PASO 02</div>
         <h4>Encuentra tu proyecto</h4>
-        <p>Explora los proyectos activos o propón una nueva idea que quieras llevar a la realidad.</p>
+        <p>Explora los proyectos activos o propón una nueva idea.</p>
       </div>
       <div class="icard">
         <div class="icard-step">PASO 03</div>
@@ -254,15 +217,88 @@ body{font-family:'Segoe UI',system-ui,Arial,sans-serif}
 
   <div class="footer">
     <div class="footer-left">
-      <img src="/mnt/user-data/uploads/IMG-20260415-WA0007.jpg" alt="logo">
+      <img src="LOGO UNIIMPACT.png" alt="logo">
       <span class="footer-brand">UNIIMPACT</span>
-    </div>
-    <div class="footer-center">Tecnología · Comunidad · Cambio Social</div>
-    <div class="footer-links">
-      <a href="#">Privacidad</a>
-      <a href="#">Contacto</a>
-      <a href="#">Instagram</a>
     </div>
   </div>
 
-</div>
+  <div id="modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;">
+    <div style="background:white; padding:30px; max-width:400px; margin:100px auto; border-radius:15px;">
+      <h2>Acceso a UNIIMPACT</h2>
+
+      <input id="nombre" placeholder="Nombre">
+      <input id="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Contraseña">
+
+      <button onclick="registrar()">Registrarse</button>
+      <button onclick="login()">Iniciar sesión</button>
+      <button onclick="cerrarModal()">Cerrar</button>
+    </div>
+  </div>
+
+
+<script>
+let usuario = JSON.parse(localStorage.getItem('usuario'));
+
+window.onload = () => {
+  if(usuario){
+    mostrarUsuario();
+  }
+};
+
+function mostrarLogin(){
+  document.getElementById('modal').style.display = 'block';
+}
+
+function cerrarModal(){
+  document.getElementById('modal').style.display = 'none';
+}
+
+async function registrar(){
+  await fetch('http://localhost:3000/registro',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({
+      nombre: document.getElementById('nombre').value,
+      email: document.getElementById('email').value,
+      password: document.getElementById('password').value
+    })
+  });
+
+  alert(' Usuario registrado');
+}
+
+async function login(){
+  const res = await fetch('http://localhost:3000/login',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({
+      email: document.getElementById('email').value,
+      password: document.getElementById('password').value
+    })
+  });
+
+  const data = await res.json();
+
+  usuario = data.usuario;
+  localStorage.setItem('usuario', JSON.stringify(usuario));
+
+  mostrarUsuario();
+  cerrarModal();
+}
+
+function mostrarUsuario(){
+  document.getElementById('loginBtn').style.display = 'none';
+  document.getElementById('userInfo').style.display = 'flex';
+  document.getElementById('userName').textContent = '👤 ' + usuario.nombre;
+}
+
+function logout(){
+  localStorage.removeItem('usuario');
+  location.reload();
+}
+</script>
+
+</body>
+</html>
+
